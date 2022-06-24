@@ -1,0 +1,33 @@
+.logo {
+  height: 30px;
+}
+
+.login .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .row .login-box {
+  margin: 50px 0 0 0;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+}
+.login .row .login-box .warning-msg {
+  font-size: 12px;
+}
+.login .row .login-box .form-group {
+  margin: 0 0 20px 0;
+}
+.login .row .login-box .form-group:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .row .login-box .form-group:last-child {
+  margin: 0;
+}
+.login .row .login-box .form-group .logo {
+  filter: invert(1);
+}

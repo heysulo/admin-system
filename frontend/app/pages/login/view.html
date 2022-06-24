@@ -1,0 +1,42 @@
+<div class="container login">
+    <div class="row">
+        <div class="login-box" ng-cloak>
+            <form ng-submit="ctrlLogin.login()">
+                <div class="form-group">
+                    <img src="public/admin/img/logo.png" class="logo">
+                </div>
+                <div class="warning-msg alert alert-warning" role="alert">
+                    NOTICE: This is a private computer system.<br>
+                    This computer system is the property of the NEWNOP. It is for authorized use only. Unauthorized access or use will be prosecuted!
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email address</label>
+                    <input type="email" class="form-control"
+                           ng-model="ctrlLogin.emailAddress"
+                           ng-disabled="ctrlLogin.loggingIn"
+                           id="emailAddress" aria-describedby="emailHelp"
+                           placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password"
+                           ng-model="ctrlLogin.password"
+                           ng-disabled="ctrlLogin.loggingIn"
+                           class="form-control" id="password" placeholder="Password">
+                </div>
+
+                <div class="alert alert-danger"
+                     ng-show="ctrlLogin.errorMessage"
+                     role="alert">
+                    {{ ctrlLogin.errorMessage }}
+                </div>
+
+                <div class="form-group">
+                    <button type="submit"
+                            ng-disabled="ctrlLogin.loggingIn"
+                            class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
